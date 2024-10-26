@@ -76,7 +76,7 @@ This project is a real-time weather monitoring system that retrieves data from t
 5. Create a `.env` file in the `backend` directory with the following content:
    ```
    OPENWEATHERMAP_API_KEY=1e4c9483855d99123bb34dfc55bb15b3
-   MYSQL_PASSWORD=Pranav@2429
+   MYSQL_PASSWORD=Password
    ```
 6. Start the Flask server:
    ```
