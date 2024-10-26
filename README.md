@@ -22,7 +22,7 @@ This project is a real-time weather monitoring system that retrieves data from t
 1. Navigate to the project root directory.
 2. Install dependencies:
    ```
-   npm install
+   npm install --force
    ```
 3. Start the development server:
    ```
