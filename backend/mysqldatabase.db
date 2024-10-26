@@ -1,0 +1,55 @@
+CREATE DATABASE weather_monitoring;
+USE weather_monitoring;
+
+CREATE TABLE weather_data (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    city VARCHAR(100) NOT NULL,
+    main VARCHAR(100) NOT NULL,
+    temp DECIMAL(5, 2) NOT NULL,
+    feels_like DECIMAL(5, 2) NOT NULL,
+    dt DATETIME NOT NULL,
+    UNIQUE KEY (city, dt)
+);
+
+CREATE TABLE daily_summaries (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    city VARCHAR(100) NOT NULL,
+    date DATE NOT NULL,
+    avg_temp DECIMAL(5, 2) NOT NULL,
+    max_temp DECIMAL(5, 2) NOT NULL,
+    min_temp DECIMAL(5, 2) NOT NULL,
+    dominant_condition VARCHAR(100) NOT NULL,
+    UNIQUE KEY (city, date)
+);
+
+CREATE TABLE alerts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    city VARCHAR(100) NOT NULL,
+    message TEXT NOT NULL,
+    timestamp DATETIME NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS weather_forecasts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    city VARCHAR(100),
+    forecast_date DATETIME,
+    temp FLOAT,
+    humidity FLOAT,
+    wind_speed FLOAT,
+    weather_description VARCHAR(255)
+);
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Pranav@2429';
+
+FLUSH PRIVILEGES;
+
+select * from weather_data;
+
+ALTER TABLE weather_data 
+ADD COLUMN humidity FLOAT,
+ADD COLUMN wind_speed FLOAT;
+
+
+
+
