@@ -114,20 +114,6 @@ This project is a real-time weather monitoring system that retrieves data from t
 - requests
 - python-dotenv
 
-## Running in Production
-
-For production deployment:
-
-1. Build the frontend:
-   ```
-   npm run build
-   ```
-2. Serve the built files using a production-ready web server like Nginx.
-3. Run the Flask backend using a production WSGI server like Gunicorn:
-   ```
-   gunicorn app:app
-   ```
-4. Set up a reverse proxy to forward API requests to the Flask backend.
 
 ## Application Images
 ![image](https://github.com/user-attachments/assets/e50af2af-7516-48bd-9a07-6a5c103f063b)
