@@ -22,7 +22,7 @@ This project is a real-time weather monitoring system that retrieves data from t
 1. Navigate to the project root directory.
 2. Install dependencies:
    ```
-   npm install
+   npm install --force
    ```
 3. Start the development server:
    ```
@@ -70,13 +70,14 @@ This project is a real-time weather monitoring system that retrieves data from t
        message TEXT,
        timestamp DATETIME
      );
+
+     for more refer mysqldatabase.db file in backend folder
      ```
 5. Create a `.env` file in the `backend` directory with the following content:
    ```
-   OPENWEATHERMAP_API_KEY=your_api_key_here
-   MYSQL_PASSWORD=your_mysql_password_here
+   OPENWEATHERMAP_API_KEY=1e4c9483855d99123bb34dfc55bb15b3
+   MYSQL_PASSWORD=Password
    ```
-   Replace `your_api_key_here` with your OpenWeatherMap API key and `your_mysql_password_here` with your MySQL password.
 6. Start the Flask server:
    ```
    python app.py
@@ -113,25 +114,11 @@ This project is a real-time weather monitoring system that retrieves data from t
 - requests
 - python-dotenv
 
-## Running in Production
 
-For production deployment:
+## Application Images
+![image](https://github.com/user-attachments/assets/e50af2af-7516-48bd-9a07-6a5c103f063b)
+![image](https://github.com/user-attachments/assets/2a18430d-f0ab-447d-91c9-13f3bb95afb2)
 
-1. Build the frontend:
-   ```
-   npm run build
-   ```
-2. Serve the built files using a production-ready web server like Nginx.
-3. Run the Flask backend using a production WSGI server like Gunicorn:
-   ```
-   gunicorn app:app
-   ```
-4. Set up a reverse proxy to forward API requests to the Flask backend.
 
-## Future Improvements
 
-- Implement user authentication and personalized alerts
-- Add support for more cities and weather parameters
-- Improve error handling and logging
-- Implement caching mechanisms for better performance
-- Create a more sophisticated alerting system with user-defined rules
+
