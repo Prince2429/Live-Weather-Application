@@ -12,7 +12,7 @@ const cities = ['Delhi', 'Mumbai', 'Chennai', 'Bangalore', 'Kolkata', 'Hyderabad
 // Updated fetch function to ensure all required parameters are fetched
 const fetchWeatherData = async (city: string): Promise<WeatherData[]> => {
   try {
-    const response = await axios.get(`http://localhost:5001/api/weather?city=${city}`);
+    const response = await axios.get(`https://live-weather-application-sfnk.vercel.app/api/weather?city=${city}`);
     return response.data; // Ensure this returns humidity and wind speed as well as temp and feels_like
   } catch (error) {
     console.error('Error fetching weather data:', error);

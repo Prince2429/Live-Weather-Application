@@ -11,7 +11,7 @@ interface Alert {
 }
 
 const fetchAlerts = async (): Promise<Alert[]> => {
-  const response = await axios.get('http://localhost:5001/api/alerts');
+  const response = await axios.get('https://live-weather-application-sfnk.vercel.app/api/alerts');
   return response.data;
 };
 
